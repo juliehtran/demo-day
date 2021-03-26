@@ -1,60 +1,20 @@
-
 .background {
-    background-image: url("../img/register-bg.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+  background-image: url("../img/register-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-h1 {
-    font-size: 7.5rem;
-    font-family: 'Chewy', sans-serif;
-    color: #F15B5B;
-}
-    
-
-h2{
-    font-family: 'Trebuchet MS', sans-serif;
-}
-
-.right-column{
+.right-column {
   float: right;
   margin: 4em 10em;
 }
 
-
-button {
-    font-family: 'Trebuchet MS', sans-serif;
-    margin-left: 20px;
-    padding: 15px 25px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: white;
-    background-color: #5FA25F;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #344d34;
-    margin-top: 40px;
-  }
-  
-  button:hover {
-    background-color: #67a767;
-    color: white;
-  }
-  
-  button:active {
-    background-color: #70b470;
-    box-shadow: 0 5px #344d34;
-    transform: translateY(4px);
-  }
-
-  .right-column {
-    float: right;
-    margin: 14em 2em;
-    width: 50%;
+.right-column {
+  float: right;
+  margin: 14em 2em;
+  width: 50%;
 }
 
-form{
-    width: 50%;
+form {
+  width: 50%;
 }
