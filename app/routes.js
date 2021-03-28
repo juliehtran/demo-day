@@ -8,18 +8,44 @@ function setupRoutes(app, passport) {
 
   // show the home page (will also have our login links)
   app.get('/', (req, res) => {
-    res.render('index.ejs');
+    if (req.isAuthenticated()) {
+      res.redirect('/home')
+    } else {
+      res.render('index.ejs');
+    }
   });
 
   app.get('/home', isLoggedIn, (req, res) => {
     res.render('home.ejs')
+  });
+
+  app.get('/about', (req, res) => {
+    res.render('about.ejs');
+  });
+
+  app.get('/how-to-play', isLoggedIn, (req, res) => {
+    res.render('how-to-play.ejs')
   })
+
+  app.get('/resources', (req, res) => {
+    res.render('resources.ejs');
+  });
+
+  app.get('/more-games', isLoggedIn, (req, res) => {
+    res.render('more-games.ejs')
+  });
+
+  app.get('/user-profile', isLoggedIn, (req, res) => {
+    res.render('user-profile.ejs')
+  });
   
   // LOGOUT ==============================
   app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
   });
+
+ 
 
   // =============================================================================
   // AUTHENTICATE (FIRST LOGIN) ==================================================
@@ -42,11 +68,11 @@ function setupRoutes(app, passport) {
   // SIGNUP =================================
   // show the signup form
   app.get('/register', (req, res) => {
-    res.render('register.ejs', { message: req.flash('signupMessage') });
+    res.render('register.ejs', { message: req.flash('registerMessage') });
   });
 
   // process the signup form
-  app.post('/register', passport.authenticate('local-signup', {
+  app.post('/register', passport.authenticate('local-register', {
     successRedirect: '/home', // redirect to the secure profile section
     failureRedirect: '/register', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
