@@ -1,0 +1,29 @@
+<div
+  class="modal fade"
+  id="items-modal"
+  data-backdrop="static"
+  data-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" id="items-modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="items-container">
+          <% location.items.forEach((item) => { %>
+          <button class="item" data-item="<%= item.name %>">
+            <img
+              class="item-icon"
+              src="/img/items/<%= item.name %>.png"
+            />
+            <div>
+              <%= item.name %> / <%= item.translation %>
+            </div>
+          </button>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

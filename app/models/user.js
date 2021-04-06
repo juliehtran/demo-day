@@ -9,7 +9,8 @@ const userSchema = mongoose.Schema({
         email: String,
         password: String,
     },
-    items: [String]
+    items: [String],
+    visitedLocations: [String]
 
 });
 

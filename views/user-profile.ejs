@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include head.ejs %>
+    <title><%= user.local.email %>'s Profile</title>
+  </head>
+
+  <body class="background">
+    <%- include topnav.ejs %>
+    <section class="full-page">
+      <div class="locations">
+        <h1>Locations visited:</h1>
+        <ul>
+          <% user.visitedLocations.forEach((location) => { %>
+          <li><%= location %></li>
+          <% }); %>
+        </ul>
+      </div>
+      <div class="items">
+        <h1>Items collected:</h1>
+        <ul>
+          <% user.items.forEach((item) => { %>
+          <li><%= item %></li>
+          <% }); %>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

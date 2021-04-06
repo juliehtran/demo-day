@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include head.ejs %>
+    <link rel="stylesheet" href="css/map.css" />
+    <title>Map</title>
+  </head>
+
+  <body class="background">
+    <%- include topnav.ejs %>
+    <section class="full-page">
+      <img src="img/map.jpeg" alt="map" usemap="#map-map" class="game-map" />
+      <map
+        name="map-map"
+        data-visited-locations="<%= JSON.stringify(visitedLocations) %>"
+      >
+        <area
+          data-location="cafe"
+          alt="cafe"
+          href="/locations/cafe"
+          coords="159,257,172,242,294,244,310,257,310,374,297,387,177,387,163,374"
+          shape="poly"
+        />
+        <area
+          data-location="location2"
+          alt="location2"
+          href="/locations/2"
+          coords="356,908,367,921,520,921,533,907,540,770,528,760,366,757,349,768"
+          shape="poly"
+        />
+        <area
+          data-location="location3"
+          alt="location3"
+          href="/locations/3"
+          coords="509,232,689,234,692,109,506,109"
+          shape="poly"
+        />
+        <area
+          data-location="location4"
+          alt="location4"
+          href="/locations/4"
+          coords="837,746,848,747,848,807,1032,809,1032,757,1045,744,1040,686,1047,645,1000,632,992,619,891,617,889,629,835,643,845,686"
+          shape="poly"
+        />
+        <area
+          data-location="location5"
+          alt="location5"
+          href="/locations/5"
+          coords="1343,861,1347,850,1598,850,1606,861,1604,1007,1598,1015,1510,1015,1510,1027,1504,1037,1453,1035,1440,1025,1440,1014,1357,1014,1346,1007"
+          shape="poly"
+        />
+        <area
+          data-location="location6"
+          alt="location6"
+          href="/locations/6"
+          coords="1346,273,1461,273,1468,284,1521,286,1525,275,1554,262,1567,236,1567,167,1556,141,1530,127,1338,125,1318,140,1305,166,1307,229,1315,258"
+          shape="poly"
+        />
+      </map>
+    </section>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/imagemapster@1.5.4/dist/jquery.imagemapster.min.js"></script>
+  <script src="/js/map.js"></script>
+</html>
