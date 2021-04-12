@@ -58,8 +58,8 @@ const locations = {
         name: "restaurant",
         items: [
             { name: "seafood-soup", translation: "hủ tiếu" },
-            { name: "beef-nood", translation: "bún bò huế " },
-            { name: "meat-rice", translation: "com thịt nướng" }
+            { name: "beef-noodle-soup", translation: "bún bò huế " },
+            { name: "meat-rice-plate", translation: "com thịt nướng" }
         ],
         npc: "server",
         text: ["Welcome, please take a seat.", "We serve lots of Vietnamese dishes. Do you prefer noodles, rice, soup, stir fry?", "These are today's specials."]
