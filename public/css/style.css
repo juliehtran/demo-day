@@ -33,6 +33,8 @@ h1 {
 
 h2 {
   font-family: "Trebuchet MS", sans-serif;
+  color: #5FA25F;
+  font-weight: 800;
 }
 
 .topnav {
@@ -98,6 +100,11 @@ h2 {
 
 .flexed-container{
   flex:1;
+}
+
+.more-games-container{
+  margin-top: 10%;
+  text-align: center;
 }
 
 .centered-text{
