@@ -62,16 +62,49 @@ h2 {
 }
 
 .full-page {
+  display: flex;
   flex: 1;
   overflow: hidden;
 }
 
-.full-sized-img {
+.banner{
+  background-image: url("/img/town-banner.png");
+  background-repeat:no-repeat;
+  /* align-self: flex-end; */
+  overflow: hidden;
+  height: 500px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
 }
 
-.small-img {
-  width: 30%;
+.full-sized-img {
+  width: 100%;
+  margin-left: 5%;
+}
+
+.flexed-container{
+  flex:1;
+}
+
+.centered-text{
+  margin: 10%;
+  vertical-align: middle;
+}
+
+.centered-content{
+  text-align: center;
+  width: 60%;
+  margin: 50px auto auto;
+}
+
+.description{
+  font-size: 25px;
+}
+
+.instructions{
+  font-size: 30px;
 }
 
 .character-overlay {

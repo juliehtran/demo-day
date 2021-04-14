@@ -16,12 +16,13 @@ function onClick() {
     nextLine();
   }
 }
-
+// show the next dialogue line
 function nextLine() {
   setSpeechBox(dialogue[currentLine]);
   currentLine = currentLine + 1;
 }
 
+// insert dialogue in an animated css selector
 function setSpeechBox(text) {
   speechBox.html(
     `<div class="text-container typing-animation">
@@ -30,21 +31,24 @@ function setSpeechBox(text) {
   );
 }
 
+// show items, fire save to server on click function, show dialogue as a result, finish the location
 $(".item").on("click", onClickItem);
 
 function onClickItem(event) {
   event.stopPropagation();
 
-  const item = event.currentTarget.dataset.item;
-  sendItemToServer(item, currentLocation);
+  const item = JSON.parse(event.currentTarget.dataset.item);
+  sendItemToServer(item.name, currentLocation);
 
   itemsModal.modal("hide");
-  setSpeechBox("Great choice!");
+  setSpeechBox(`${item.translation}, great choice!`);
 
   finished = true;
 }
 
+// save to server functions
 function sendItemToServer(item, location) {
+  // fetch the /items from the 
   fetch("/item", {
     method: "POST",
     body: JSON.stringify({ item, location }),

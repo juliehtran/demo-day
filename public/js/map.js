@@ -1,4 +1,6 @@
-const visitedLocations = $('map').data().visitedLocations
+// equivalent jquery syntax
+// const visitedLocations = $('map').data().visitedLocations
+const visitedLocations = JSON.parse(document.querySelector('map').dataset.visitedLocations)
 const areas = visitedLocations.map((location) => ({ key: location, staticState: true }))
 
 $("img[usemap]").mapster({
