@@ -107,6 +107,11 @@ h2 {
   text-align: center;
 }
 
+.newsletter{
+  position: absolute;
+  margin-top: 7%;
+}
+
 .centered-text{
   margin: 10%;
   vertical-align: middle;
@@ -214,4 +219,10 @@ h2 {
   border: 2px solid wheat;
   border-radius: 1em;
   text-align: center;
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: #f57679;
 }
