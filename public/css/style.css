@@ -62,9 +62,12 @@ h2 {
 }
 
 .full-page {
-  display: flex;
   flex: 1;
   overflow: hidden;
+}
+
+.page-flex{
+  display: flex;
 }
 
 .banner{
@@ -79,9 +82,18 @@ h2 {
   z-index: -1;
 }
 
+.banner-img{
+  margin-left: 5%;
+  width: 100%;
+}
+
+.wrapper:hover .slide {
+  transition: 1s;
+  left: 0;
+}
+
 .full-sized-img {
   width: 100%;
-  margin-left: 5%;
 }
 
 .flexed-container{
@@ -156,7 +168,7 @@ h2 {
   }
 }
 
-.fade-in {
+.fade-in{
   animation: fadeIn ease 1s;
 }
 
