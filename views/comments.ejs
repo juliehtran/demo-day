@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include head.ejs %>
+    <title>Comments</title>
+  </head>
+
+  <body class="background">
+    <%- include topnav.ejs %>
+    <section class="full-page">
+      <h1>Leave a comment!</h1>
+      <form class="comment-form" action="/api/comment" method="POST">
+        <textarea class="js-comment-box"></textarea>
+        <button class="btn btn-primary">Post!</button>
+      </form>
+      <div class="comments" id="js-comment-feed">
+      </div>
+    </section>
+  </body>
+  <script src="/js/comments.js"></script>
+</html>

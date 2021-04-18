@@ -1,5 +1,6 @@
 const isLoggedIn = require("./helpers/is_logged_in");
 const locations = require('../models/locations');
+const Comment = require('../models/comment');
 
 module.exports = setupPages;
 
@@ -29,8 +30,9 @@ function setupPages(app) {
     res.render("resources.ejs");
   });
 
-  app.get("/more-games", isLoggedIn, (req, res) => {
-    res.render("more-games.ejs");
+  app.get("/comments", isLoggedIn, async (req, res) => {
+    const comments = await Comment.find().populate('user').sort({ createdAt: -1 })
+    res.render("comments.ejs", { comments });
   });
 
   app.get("/user-profile", isLoggedIn, (req, res) => {

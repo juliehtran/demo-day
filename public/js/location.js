@@ -49,7 +49,7 @@ function onClickItem(event) {
 // save to server functions
 function sendItemToServer(item, location) {
   // fetch the /items from the 
-  fetch("/item", {
+  fetch("/api/item", {
     method: "POST",
     body: JSON.stringify({ item, location }),
     headers: {
