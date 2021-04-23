@@ -9,6 +9,7 @@ function addCommentToFeed(comment) {
         <div class="comment card">
             <div class="card-body">
                 <h2 class="username card-title">${comment.user.local.email} wrote:</h2>
+                <i class="fa fa-times-circle delete-button"></i>
                 <p class="date">${new Date(comment.createdAt)}</p>
                 <p class="message card-text">${comment.message}</p>
             </div>
@@ -43,3 +44,18 @@ $(`.comment-form`).on('submit', async (event) => {
     // clear the input box
     input.value = ""
 })
+
+document.querySelectorAll('.delete-button').forEach(deleteButton => {
+    deleteButton.addEventListener('click', onDeleteClicked)
+})
+
+function onDeleteClicked(event) {
+    const deleteButton = event.target
+    const comment = deleteButton.closest('.comments')
+    const id = comment.id
+    fetch('/comments', {
+        method: `DELETE`,
+        body: JSON.stringify({ id: id }),
+        headers: { "Content-Type": `application/json` }
+    }).then(() => window.location.reload())
+}

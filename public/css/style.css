@@ -22,7 +22,14 @@
   background-color: #70b470;
   box-shadow: 0 5px #344d34;
   transform: translateY(4px);
+  outline: none;
+    border: none;
 }
+
+button:focus {
+  outline:0;
+}
+
 
 .h1,
 h1 {
@@ -37,11 +44,12 @@ h2 {
   font-weight: 800;
 }
 
+/* -----------------------------------------navigation ------------------------ */
+
 .topnav {
   overflow: hidden;
   background-color: #f15b5b;
 }
-
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -62,6 +70,14 @@ h2 {
   background-color: #70b470;
   color: white;
 }
+
+.ship-parts{
+  width: 60px;
+  float: right;
+  margin-right: 50px;
+}
+
+/* -----------------------------------page styles--------------------------- */
 
 .full-page {
   flex: 1;
@@ -98,6 +114,19 @@ h2 {
   width: 100%;
 }
 
+.map-size{
+  width: 50%;
+}
+
+.padding-80px{
+  padding: 80px;
+}
+/* -------------------------------text layout and sizing--------------------- */
+
+.neighborhood-description{
+  margin-top: 50px;
+}
+
 .flexed-container{
   flex:1;
 }
@@ -111,7 +140,6 @@ h2 {
   position: absolute;
   margin-top: 7%;
 }
-
 .centered-text{
   margin: 10%;
   vertical-align: middle;
@@ -130,7 +158,33 @@ h2 {
 .instructions{
   font-size: 30px;
 }
+/* -------------------------------comment nav ------------------------------ */
+.date{
+  color:darkgray;
+  font-family: "Chewy";
+  letter-spacing: 1px;
+}
 
+.message{
+  color: black;
+  font-family: "Chewy";
+  font-size: 25px;
+}
+
+.comment{
+  vertical-align: middle;
+}
+
+.comment-scroll{
+  overflow: scroll;
+  height: 700px;
+}
+
+.delete-button{
+  color:darkgray;
+  float:right;
+}
+/* -------------------------------------map animations--------------------- */
 .character-overlay {
   position: absolute;
   /* under the text */
@@ -221,6 +275,32 @@ h2 {
   text-align: center;
 }
 
+/* ----------------------------------user items -------------------------- */
+
+.items, .locations{
+  background-color: #FFFBE8;
+  width: 60%;
+  height: 400px;
+  border-radius: 20px;
+  padding: 20px;
+ margin: 20px auto 50px auto;
+ /* overflow: scroll; */
+}
+
+.no-bullets{
+  list-style-type: none;
+}
+
+.row{
+  flex-direction: row;
+}
+
+.row li{
+  padding: 30px 30px 30px;
+}
+
+
+/* ----------------------------------footer ---------------------------- */
 footer{
   width: 100%;
   height: 100px;

@@ -3,45 +3,83 @@
 
 <head>
     <%- include head.ejs %>
-    <link rel="stylesheet" href="css/about.css">
-    <title>About</title>
+        <link rel="stylesheet" href="css/about.css">
+        <title>About</title>
 </head>
 
 <body class="background">
 
     <%- include topnav.ejs %>
-    
-    <div class="centered-content">
-        <h1>What is This Game?</h1>
-        <h2>An interactive language game for children ages 7 - 12</h2>
-        <p class="description">
-            Crash Landing On is a game that not only teaches children basic Vietnamese
-            vocabulary, but also introduces real locations operated by people of the
-            same culture. This is a full stack game with a registration, sign up page,
-            and data base for user information. This includes data gathered during game play.
-        </p>
 
-        <img src="img/children.png" alt="kids-reading">
-    </div>
+        <div class="centered-content">
+            <h1>What is This Game?</h1>
+            <h2>An interactive language game for children ages 7 - 12</h2>
+            <p class="description">
+                Crash Landing On is a game that not only teaches children basic Vietnamese
+                vocabulary, but also introduces real locations operated by people of the
+                same culture. This is a full stack game with a registration, sign up page,
+                and data base for user information. This includes data gathered during game play.
+            </p>
 
-    <section class="page-flex stage">
-    <div class="flexed-container">
-        <h1 class="centered-content">The Story</h1>
-        <p class="description centered-content">
-            The user plays as an alien whose ship has crashed, in this scenario, Little Saigon,
-            a line of Vietnamese-owned businesses along Dorchester Ave in Boston, MA.
-            The aliens have lost 6 parts of their ship, and must interact with the locals to
-            find them. This comes with a price, you must purchase something from their business.
-            During the alien's search, the user learns vocabulary of various common objects from food,
-            to glasses, flowers, and more. Each purchase is brought back to the alien's ship mates
-            and kept in their inventory. The ship parts are also counted along the journey.
-        </p>
-    </div>
+            <img src="img/children.png" alt="kids-reading">
+        </div>
 
-    <div class="flexed-container">
-        <img class="inline" src="img/alien-group.png" alt="alien-group">
-    </div>
-</section>
+        <section class="page-flex stage">
+            <div class="flexed-container">
+                <h1 class="centered-content">The Story</h1>
+                <p class="description centered-content">
+                    The user plays as an alien whose ship has crashed, in this scenario, Little Saigon,
+                    a line of Vietnamese-owned businesses along Dorchester Ave in Boston, MA.
+                    The aliens have lost 6 parts of their ship, and must interact with the locals to
+                    find them. This comes with a price, you must purchase something from their business.
+                    During the alien's search, the user learns vocabulary of various common objects from food,
+                    to glasses, flowers, and more. Each purchase is brought back to the alien's ship mates
+                    and kept in their inventory. The ship parts are also counted along the journey.
+                </p>
+            </div>
+
+            <div class="flexed-container">
+                <img class="inline" src="img/alien-group.png" alt="alien-group">
+            </div>
+        </section>
+
+        <div class="centered-content">
+            <h1>What is Boston Little Saigon?</h1>
+            <br>
+            <h2>A cultural district striving to reinvent a point of attraction for Vietnamese
+                American cuisine, events, language programs, businesses and organizations.
+            </h2>
+            <br>
+            <img class="full-sized-img" src="img/neighborhood.png" alt="neighborhood">
+            
+            <p class="description neighborhood-description">
+                This district aims to highlight, recognize, and preserve Vietnamese
+                American culture already present in the area and the community’s significant
+                contributions to Dorchester’s unique history of immigrant experiences. Located along Dorchester Ave, it
+                is a point of attraction for Vietnamese
+                American cuisine, events, language programs, businesses and organizations.
+            </p>
+        </div>
+
+    <section class="page-flex padding-80px">
+        <div class="flexed-container padding-80px">
+            <h1 class="centered-content">There's Plenty to See!</h1>
+            <p class="description neighborhood-description">
+                Zoom in on the map to find the Vietnamese establishments mentioned in this game. Surrounding 
+                streets also offer a variety of businesses you can visit for great food and services. 
+                You might find yourself a personal favorite.
+            <br>
+            <div class="centered-content">
+            <a class="button-link" href="https://www.bostonlittlesaigon.org/">Learn More</a>
+            </div>
+        </div>
+        <div class="flexed-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1v9RFb95puSFIuJSUguy0i6uOsUTIeQV-&hl=en" width="640" height="480"></iframe>
+        </div>
+    </section>
+
+
+
 </body>
 
 </html>

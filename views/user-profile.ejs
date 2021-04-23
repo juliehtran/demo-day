@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <%- include head.ejs %>
-    <title><%= user.local.email %>'s Profile</title>
-  </head>
 
-  <body class="background">
-    <%- include topnav.ejs %>
+<head>
+  <%- include head.ejs %>
+    <title>
+      <%= user.local.email %>'s Profile
+    </title>
+</head>
+
+<body class="background">
+  <%- include topnav.ejs %>
     <section class="full-page">
       <div class="locations">
-        <h1>Locations visited:</h1>
-        <ul>
-          <% user.visitedLocations.forEach((location) => { %>
-          <li><%= location %></li>
-          <% }); %>
+        <h1 class="centered-content">Locations visited:</h1>
+        <section class="page-flex centered-content">
+        <ul class="no-bullets row">
+          <% user.visitedLocations.forEach((location)=> { %>
+            <li>
+              <%= location %>
+            </li>
+            <% }); %>
         </ul>
       </div>
+      </section>
+
+      <br>
+
       <div class="items">
-        <h1>Items collected:</h1>
-        <ul>
-          <% user.items.forEach((item) => { %>
-          <li><%= item %></li>
-          <% }); %>
-        </ul>
+        <h1 class="centered-content">Items collected:</h1>
+        <section class="page-flex">
+          <ul class="no-bullets row">
+            <% user.items.forEach((item)=> { %>
+              <li>
+                <%= item %>
+              </li>
+              <% }); %>
+          </ul>
+        </section>
       </div>
     </section>
-  </body>
+</body>
+
 </html>

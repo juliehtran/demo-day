@@ -51,7 +51,7 @@ const locations = {
             { name: "pastry", translation: "bánh ngọt" }
         ],
         npc: "baker",
-        text: ["Hello~ Welcome to Ba Le bakery.", "We serve baguette sandwiches, sweet bread, and Vietnamese lunch boxes.", "May I take your oder?"]
+        text: ["Hello~ Welcome to Ba Lẹ  bakery.", "We serve baguette sandwiches, sweet bread, and Vietnamese lunch boxes.", "May I take your oder?"]
     },
 
     restaurant: {
@@ -62,7 +62,7 @@ const locations = {
             { name: "meat-rice-plate", translation: "com thịt nướng" }
         ],
         npc: "server",
-        text: ["Welcome, please take a seat.", "We serve lots of Vietnamese dishes. Do you prefer noodles, rice, soup, stir fry?", "These are today's specials."]
+        text: ["Welcome to Pho Hoa, please take a seat!", "We serve lots of Vietnamese dishes. Do you prefer noodles, rice, soup, stir fry?", "These are today's specials."]
     },
 }
 
