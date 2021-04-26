@@ -14,30 +14,31 @@
       <div class="locations">
         <h1 class="centered-content">Locations visited:</h1>
         <section class="page-flex centered-content">
-        <ul class="no-bullets row">
-          <% user.visitedLocations.forEach((location)=> { %>
-            <li>
-              <%= location %>
-            </li>
-            <% }); %>
-        </ul>
-      </div>
-      </section>
-
-      <br>
-
-      <div class="items">
-        <h1 class="centered-content">Items collected:</h1>
-        <section class="page-flex">
           <ul class="no-bullets row">
-            <% user.items.forEach((item)=> { %>
+            <% user.visitedLocations.forEach((location)=> { %>
               <li>
-                <%= item %>
+                <%= location %>
               </li>
               <% }); %>
           </ul>
-        </section>
       </div>
+    </section>
+
+    <br>
+
+    <div class="items">
+      <h1 class="centered-content">Items collected:</h1>
+      <section class="page-flex">
+        <ul class="no-bullets row">
+          <% user.items.forEach((item)=> { %>
+            <li>
+              <img class="item-icon" src="/img/items/<%= item %>.png" />
+              <%= item %>
+            </li>
+            <% }); %>
+        </ul>
+      </section>
+    </div>
     </section>
 </body>
 
