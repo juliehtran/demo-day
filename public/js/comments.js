@@ -6,7 +6,7 @@ $(document).ready(async () => {
 
 function addCommentToFeed(comment) {
     $(`#js-comment-feed`).prepend(`
-        <div class="comment card">
+        <div class="comment card" data-id="${comment._id}">
             <div class="card-body">
                 <h2 class="username card-title">${comment.user.local.email} wrote:</h2>
                 <i class="fa fa-times-circle delete-button"></i>
@@ -45,17 +45,15 @@ $(`.comment-form`).on('submit', async (event) => {
     input.value = ""
 })
 
-document.querySelectorAll('.delete-button').forEach(deleteButton => {
-    deleteButton.addEventListener('click', onDeleteClicked)
-})
+$(document).on('click', '.delete-button', onDeleteClicked)
 
 function onDeleteClicked(event) {
     const deleteButton = event.target
-    const comment = deleteButton.closest('.comments')
-    const id = comment.id
-    fetch('/comments', {
+    const comment = deleteButton.closest('.comment')
+    const id = comment.dataset.id
+    fetch('/api/comment', {
         method: `DELETE`,
         body: JSON.stringify({ id: id }),
         headers: { "Content-Type": `application/json` }
-    }).then(() => window.location.reload())
+    }).then(() => comment.remove())
 }

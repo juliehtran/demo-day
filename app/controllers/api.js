@@ -31,7 +31,13 @@ function setupApi(app) {
     })
 
     app.get('/api/comments', async (req, res) => {
-        const comments = await Comment.find().populate('user').sort({ createdAt: -1 })
+        const comments = await Comment.find().populate('user').sort({ createdAt: 1 })
         res.json(comments)
     })
+
+    app.delete('/api/comment', async (req, res) => {
+        const comment = await Comment.deleteOne({ "_id" : req.body.id })
+        res.json(comment)
+    })
+
 }
