@@ -18,16 +18,12 @@ function setupPages(app) {
     res.render("home.ejs");
   });
 
-  app.get("/about", (req, res) => {
+  app.get("/about", isLoggedIn, (req, res) => {
     res.render("about.ejs");
   });
 
   app.get("/how-to-play", isLoggedIn, (req, res) => {
     res.render("how-to-play.ejs");
-  });
-
-  app.get("/resources", (req, res) => {
-    res.render("resources.ejs");
   });
 
   app.get("/comments", isLoggedIn, async (req, res) => {
