@@ -51,7 +51,7 @@ const locations = {
             { name: "pastry", translation: "bánh ngọt" }
         ],
         npc: "baker",
-        text: ["Hello~ Welcome to Ba Lẹ  bakery.", "We serve baguette sandwiches, sweet bread, and Vietnamese lunch boxes.", "May I take your oder?"]
+        text: ["Hello~ Welcome to Ba Lẹ  bakery.", "We serve baguette sandwiches, sweet bread, and Vietnamese lunch boxes.", "May I take your order?"]
     },
 
     restaurant: {
