@@ -38,7 +38,8 @@ function onClickItem(event) {
   event.stopPropagation();
 
   const item = JSON.parse(event.currentTarget.dataset.item);
-  sendItemToServer(item.name, currentLocation);
+  const payload = `${item.name}|${item.translation}`
+  sendItemToServer(payload, currentLocation);
 
   itemsModal.modal("hide");
   setSpeechBox(`${item.translation}, great choice!`);
