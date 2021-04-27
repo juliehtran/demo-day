@@ -1,3 +1,5 @@
+
+/* --------------------------------button styles ------------------------- */
 .button-link {
   font-family: "Trebuchet MS", sans-serif;
   padding: 15px 25px;
@@ -16,6 +18,7 @@
   background-color: #67a767;
   color: white;
   text-decoration: none;
+  border: none;
 }
 
 .button-link:active {
@@ -23,13 +26,24 @@
   box-shadow: 0 5px #344d34;
   transform: translateY(4px);
   outline: none;
-    border: none;
+  border: none;
 }
 
 button:focus {
-  outline:0;
+  outline: none;
 }
 
+.regular-links{
+  color: #70b470;
+  text-decoration: none; /* no underline */
+}
+
+.regular-links:hover{
+ color:#10ac10
+}
+
+
+/* --------------------------h1 and h1 -------------------------------------- */
 
 .h1,
 h1 {
@@ -75,6 +89,13 @@ h2 {
   width: 60px;
   float: right;
   margin-right: 50px;
+}
+
+.gears-count{
+  font-size: 30px;
+  color: white;
+  font-family: "Chewy";
+  float:right;
 }
 
 /* -----------------------------------page styles--------------------------- */
@@ -277,14 +298,24 @@ h2 {
 
 /* ----------------------------------user items -------------------------- */
 
-.items, .locations{
-  background-color: #FFFBE8;
+.items{
+  background-color: #fffade;
   width: 60%;
-  height: 400px;
+  height: 500px;
   border-radius: 20px;
   padding: 20px;
- margin: 20px auto 50px auto;
- /* overflow: scroll; */
+  margin: 20px auto 50px auto;
+ overflow: scroll;
+}
+
+.locations{
+  background-color: #fffade;
+  width: 60%;
+  height: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto 50px auto;
+
 }
 
 .no-bullets{
@@ -299,6 +330,19 @@ h2 {
   padding: 30px 30px 30px;
 }
 
+.saved-item{
+  font-weight: 700;
+  color:  #5fa25f;
+  text-align: center;
+}
+
+.translated-item{
+  color:  #f15b5b;
+}
+
+audio:focus {
+  outline: none;
+}
 
 /* ----------------------------------footer ---------------------------- */
 footer{

@@ -12,6 +12,8 @@
       <div class="modal-body">
         <div class="items-container">
           <% location.items.forEach((item) => { %>
+
+            <!-- the item image, name and translation are a button -->
           <button class="item" data-item="<%= JSON.stringify(item) %>">
             <img
               class="item-icon"
@@ -20,6 +22,11 @@
             <div>
               <%= item.name.split("-").join(" ") %> / <%= item.translation %>
             </div>
+
+            <audio controls>
+              <source src="/audio/<%= item.name %>.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
           </button>
           <% }); %>
         </div>
