@@ -294,6 +294,12 @@ h2 {
   border: 2px solid wheat;
   border-radius: 1em;
   text-align: center;
+  flex: 1;
+  margin: 4px;
+}
+
+.item audio {
+  width: 100%;
 }
 
 /* ----------------------------------user items -------------------------- */
