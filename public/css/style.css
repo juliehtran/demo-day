@@ -1,5 +1,5 @@
-
 /* --------------------------------button styles ------------------------- */
+
 .button-link {
   font-family: "Trebuchet MS", sans-serif;
   padding: 15px 25px;
@@ -33,20 +33,19 @@ button:focus {
   outline: none;
 }
 
-.regular-links{
+.regular-links {
   color: #70b470;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
+  /* no underline */
 }
 
-.regular-links:hover{
- color:#10ac10
+.regular-links:hover {
+  color: #10ac10
 }
-
 
 /* --------------------------h1 and h1 -------------------------------------- */
 
-.h1,
-h1 {
+.h1, h1 {
   font-size: 7.5rem;
   font-family: "Chewy", sans-serif;
   color: #f15b5b;
@@ -64,6 +63,7 @@ h2 {
   overflow: hidden;
   background-color: #f15b5b;
 }
+
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -85,17 +85,17 @@ h2 {
   color: white;
 }
 
-.ship-parts{
+.ship-parts {
   width: 60px;
   float: right;
   margin-right: 50px;
 }
 
-.gears-count{
+.gears-count {
   font-size: 30px;
   color: white;
   font-family: "Chewy";
-  float:right;
+  float: right;
 }
 
 /* -----------------------------------page styles--------------------------- */
@@ -105,13 +105,13 @@ h2 {
   overflow: hidden;
 }
 
-.page-flex{
+.page-flex {
   display: flex;
 }
 
-.banner{
+.banner {
   background-image: url("/img/town-banner.png");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   /* align-self: flex-end; */
   overflow: hidden;
   height: 500px;
@@ -121,7 +121,7 @@ h2 {
   z-index: -1;
 }
 
-.banner-img{
+.banner-img {
   margin-left: 5%;
   width: 100%;
 }
@@ -135,77 +135,83 @@ h2 {
   width: 100%;
 }
 
-.map-size{
+.map-size {
   width: 50%;
 }
 
-.padding-80px{
+.padding-80px {
   padding: 80px;
 }
+
 /* -------------------------------text layout and sizing--------------------- */
 
-.neighborhood-description{
+.neighborhood-description {
   margin-top: 50px;
 }
 
-.flexed-container{
-  flex:1;
+.flexed-container {
+  flex: 1;
 }
 
-.more-games-container{
+.more-games-container {
   margin-top: 10%;
   text-align: center;
 }
 
-.newsletter{
+.newsletter {
   position: absolute;
   margin-top: 7%;
 }
-.centered-text{
+
+.centered-text {
   margin: 10%;
   vertical-align: middle;
 }
 
-.centered-content{
+.centered-content {
   text-align: center;
   width: 60%;
   margin: 50px auto auto;
 }
 
-.description{
+.description {
   font-size: 25px;
 }
 
-.instructions{
+.instructions {
   font-size: 30px;
 }
+
 /* -------------------------------comment nav ------------------------------ */
-.date{
-  color:darkgray;
+
+.date {
+  color: darkgray;
   font-family: "Chewy";
   letter-spacing: 1px;
 }
 
-.message{
+.message {
   color: black;
   font-family: "Chewy";
   font-size: 25px;
 }
 
-.comment{
+.comment {
   vertical-align: middle;
 }
 
-.comment-scroll{
+.comment-scroll {
   overflow: scroll;
   height: 700px;
 }
 
-.delete-button{
-  color:darkgray;
-  float:right;
+.delete-button {
+  color: darkgray;
+  float: right;
 }
+
 /* -------------------------------------map animations--------------------- */
+
 .character-overlay {
   position: absolute;
   /* under the text */
@@ -255,7 +261,7 @@ h2 {
   }
 }
 
-.fade-in{
+.fade-in {
   animation: fadeIn ease 1s;
 }
 
@@ -304,46 +310,45 @@ h2 {
 
 /* ----------------------------------user items -------------------------- */
 
-.items{
+.items {
   background-color: #fffade;
   width: 60%;
   height: 500px;
   border-radius: 20px;
   padding: 20px;
   margin: 20px auto 50px auto;
- overflow: scroll;
+  overflow: scroll;
 }
 
-.locations{
+.locations {
   background-color: #fffade;
   width: 60%;
   height: 300px;
   border-radius: 20px;
   padding: 20px;
   margin: 20px auto 50px auto;
-
 }
 
-.no-bullets{
+.no-bullets {
   list-style-type: none;
 }
 
-.row{
+.row {
   flex-direction: row;
 }
 
-.row li{
+.row li {
   padding: 30px 30px 30px;
 }
 
-.saved-item{
+.saved-item {
   font-weight: 700;
-  color:  #5fa25f;
+  color: #5fa25f;
   text-align: center;
 }
 
-.translated-item{
-  color:  #f15b5b;
+.translated-item {
+  color: #f15b5b;
 }
 
 audio:focus {
@@ -351,16 +356,16 @@ audio:focus {
 }
 
 /* ----------------------------------footer ---------------------------- */
-.footer-bg{
-  background-color:  #5fa25f;
+
+.footer-bg {
+  background-color: #5fa25f;
 }
 
-footer a{
+footer a {
   color: white;
   text-decoration: none;
 }
 
-footer{
+footer {
   margin-top: 100px;
-  
 }
