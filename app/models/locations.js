@@ -15,10 +15,10 @@ const locations = {
         items: [
             { name: "rose", translation: "hoa hồng" },
             { name: "cactus", translation: "cây xương rồng" },
-            { name: "bouqet", translation: "bó hoa" }
+            { name: "bouquet", translation: "bó hoa" }
         ],
         npc: "florist",
-        text: ["Welcome to Kim's Flowers!", "I have lots of pretty flowers you can choose", "If you're new, I can suggest some popular choices!"]
+        text: ["Welcome to Kim's Flowers!", "I have lots of pretty flowers you can choose from", "If you're new, I can suggest some popular choices!"]
     },
   
     "eye-doctor": {
