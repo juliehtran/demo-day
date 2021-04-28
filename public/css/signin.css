@@ -13,3 +13,17 @@
 form {
   width: 50%;
 }
+
+@media screen and (max-width: 800px) {
+  .background {
+    background-image: url("../img/backgrounds/mobile-sign-in.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .right-column {
+    margin-bottom: 100px;
+  }
+}
