@@ -1,15 +1,17 @@
 $(document).ready(async () => {
     const response = await fetch('/api/comments')
     const comments = await response.json()
-    comments.forEach(comment => addCommentToFeed(comment))
+    const userResponse = await fetch('/api/user')
+    const user = await userResponse.json()
+    comments.forEach(comment => addCommentToFeed(comment, user))
 })
 
-function addCommentToFeed(comment) {
+function addCommentToFeed(comment, user) {
     $(`#js-comment-feed`).prepend(`
         <div class="comment card" data-id="${comment._id}">
             <div class="card-body">
                 <h2 class="username card-title">${comment.user.local.email} wrote:</h2>
-                <i class="fa fa-times-circle delete-button"></i>
+                ${!user || comment.user._id === user._id ? `<i class="fa fa-times-circle delete-button"></i>` : ``}
                 <p class="date">${new Date(comment.createdAt)}</p>
                 <p class="message card-text">${comment.message}</p>
             </div>
@@ -55,5 +57,9 @@ function onDeleteClicked(event) {
         method: `DELETE`,
         body: JSON.stringify({ id: id }),
         headers: { "Content-Type": `application/json` }
-    }).then(() => comment.remove())
+    }).then((response) => {
+        if (response.status < 300) {
+            comment.remove()
+        }
+    })
 }

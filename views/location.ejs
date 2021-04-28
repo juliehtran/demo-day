@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <%- include('head.ejs') %>
+
+<head>
+  <%- include('head.ejs') %>
     <title>
       <%= location.name[0].toUpperCase() + location.name.slice(1).split("-").join(" ") %>
     </title>
   </head>
 
-  <body class="background full-page">
-    <%- include('topnav.ejs') %>
-    <section class="stage">
-      <img
-        class="full-sized-img"
-        src="/img/backgrounds/<%= location.name %>.png"
-        alt="<%= location.name %>"
-      />
+  <body class=" background full-page">
+        <%- include('topnav.ejs') %>
+          <section class="stage">
+            <img class="full-sized-img" src="/img/backgrounds/<%= location.name %>.png" alt="<%= location.name %>" />
 
-      <%- include('items-modal.ejs', { location: location }) %>
+            <%- include('items-modal.ejs', { location: location }) %>
 
-      <img
-        class="character-overlay fade-in"
-        src="/img/npcs/<%= location.npc %>.png"
-        alt="<%= location.npc %>"
-      />
+              <img class="character-overlay fade-in" src="/img/npcs/<%= location.npc %>.png"
+                alt="<%= location.npc %>" />
 
-      <div
-        class="speech-overlay fade-in delayed transparent"
-        data-dialogue="<%= JSON.stringify(location.text) %>"
-        data-location="<%= location.name %>"
-      >
-        <div class="text-container typing-animation delayed">
-            <%= location.text[0] %>
-        </div>
-    </div>
-    </section>
+              <div class="speech-overlay fade-in delayed transparent"
+                data-dialogue="<%= JSON.stringify(location.text) %>" data-location="<%= location.name %>">
+                <div class="text-container typing-animation delayed">
+                  <%= location.text[0] %>
+                </div>
+              </div>
+          </section>
   </body>
 
-  <script src="/js/location.js"></script>
+          <script src="/js/location.js"></script>
+
 </html>

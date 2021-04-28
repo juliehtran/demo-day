@@ -345,8 +345,16 @@ audio:focus {
 }
 
 /* ----------------------------------footer ---------------------------- */
+.footer-bg{
+  background-color:  #5fa25f;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
 footer{
-  width: 100%;
-  height: 100px;
-  background-color: #f57679;
+  margin-top: 100px;
+  
 }

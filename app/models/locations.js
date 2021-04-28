@@ -3,7 +3,7 @@ const locations = {
         name: "cafe",
         items: [
             { name: "boba", translation: "trà trân châu" },
-            { name: "mochi-donut", translation: "bánh rán mochi" },
+            { name: "fried-chicken", translation: "gà chiên" },
             { name: "viet-coffee", translation: "cà phê sữa đá" }
         ],
         npc: "chef",
