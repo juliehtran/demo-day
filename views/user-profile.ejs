@@ -11,20 +11,6 @@
 <body class="background">
   <%- include topnav.ejs %>
     <section class="full-page">
-      <div class="locations">
-        <h1 class="centered-content">Locations visited:</h1>
-        <section class="page-flex centered-content">
-          <ul class="no-bullets row">
-            <% user.visitedLocations.forEach((location)=> { %>
-              <li class="saved-item">
-                <%= location.split('-').join(' ') %>
-              </li>
-              <% }); %>
-          </ul>
-      </div>
-    </section>
-
-    <br>
 
     <div class="items">
       <h1 class="centered-content">Items collected:</h1>
@@ -41,6 +27,21 @@
         </ul>
       </section>
     </div>
+    </section>
+
+    <br>
+    
+      <div class="locations">
+        <h1 class="centered-content">Locations visited:</h1>
+        <section class="page-flex centered-content">
+          <ul class="no-bullets row">
+            <% user.visitedLocations.forEach((location)=> { %>
+              <li class="saved-item">
+                <%= location.split('-').join(' ') %>
+              </li>
+              <% }); %>
+          </ul>
+      </div>
     </section>
 
     <footer class="footer-bg text-center text-white">
