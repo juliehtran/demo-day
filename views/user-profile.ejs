@@ -17,7 +17,7 @@
           <ul class="no-bullets row">
             <% user.visitedLocations.forEach((location)=> { %>
               <li class="saved-item">
-                <%= location.replaceAll('-', ' ') %>
+                <%= location.split('-').join(' ') %>
               </li>
               <% }); %>
           </ul>
@@ -34,7 +34,7 @@
             <% const [english, vietnamese] = item.split('|') %>
             <li>
               <img class="item-icon" src="/img/items/<%= english %>.png" />
-              <div class="saved-item"> <%= english.replaceAll('-', ' ') %></div>
+              <div class="saved-item"> <%= english.split('-').join(' ') %></div>
               <div class="saved-item translated-item"><%= vietnamese %></div>
             </li>
             <% }); %>
