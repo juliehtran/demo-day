@@ -36,8 +36,18 @@ function setupApi(app) {
     })
 
     app.delete('/api/comment', async (req, res) => {
-        const comment = await Comment.deleteOne({ "_id" : req.body.id })
-        res.json(comment)
+        const comment = await Comment.findOne({ "_id": req.body.id })
+        if (String(req.user._id) === String(comment.user)) {
+            await Comment.deleteOne({ "_id": req.body.id })
+            res.json({ success: true })
+        }
+        else {
+            res.status(403).json({ "error": "not permitted!" });
+        }
+    })
+
+    app.get('/api/user', async (req, res) => {
+        res.json(req.user)
     })
 
 }
