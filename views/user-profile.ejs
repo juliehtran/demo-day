@@ -16,6 +16,7 @@
       <h1 class="centered-content">Items collected:</h1>
       <section class="page-flex">
         <ul class="no-bullets row">
+          <!-- ejs interpolation method to save each item -->
           <% user.items.forEach((item)=> { %>
             <% const [english, vietnamese] = item.split('|') %>
             <li>
@@ -30,7 +31,7 @@
     </section>
 
     <br>
-    
+
       <div class="locations">
         <h1 class="centered-content">Locations visited:</h1>
         <section class="page-flex centered-content">

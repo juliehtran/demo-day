@@ -4,6 +4,8 @@
 <head>
   <%- include('head.ejs') %>
     <title>
+      <!-- each location is created by using ejs interpolation of the path of my background image's 
+        name and using string methods to write them into the title-->
       <%= location.name[0].toUpperCase() + location.name.slice(1).split("-").join(" ") %>
     </title>
   </head>
@@ -12,7 +14,7 @@
         <%- include('topnav.ejs') %>
           <section class="stage">
             <img class="full-sized-img" src="/img/backgrounds/<%= location.name %>.png" alt="<%= location.name %>" />
-
+            <!-- items modal is a separate ejs file which is included and animated into the dom -->
             <%- include('items-modal.ejs', { location: location }) %>
 
               <img class="character-overlay fade-in" src="/img/npcs/<%= location.npc %>.png"
