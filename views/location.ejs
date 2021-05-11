@@ -3,9 +3,9 @@
 
 <head>
   <%- include('head.ejs') %>
+  <!-- each location is created by using ejs interpolation of the path of my background image's 
+    name and using string methods to write them into the title-->
     <title>
-      <!-- each location is created by using ejs interpolation of the path of my background image's 
-        name and using string methods to write them into the title-->
       <%= location.name[0].toUpperCase() + location.name.slice(1).split("-").join(" ") %>
     </title>
   </head>

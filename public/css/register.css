@@ -19,7 +19,7 @@ form {
   width: 50%;
 }
 
-@media screen and (max-width: 800px) {
+@media all and (max-width: 800px) {
   .background {
     background-image: url("../img/backgrounds/mobile-register.png");
     background-size: cover;
